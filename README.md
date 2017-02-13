@@ -7,4 +7,4 @@ This example shows:
 1. Create Components, attach them to Entities (GameObjects)
 2. Create Events (to get the systems to communicate)
 3. Create Systems (to do all the logic of the game)
-![alt tag](https://raw.githubusercontent.com/bayganik/EgoCS_RaceCar_Example/blob/master/RaceCarGame.png]
+![alt tag](blob/master/RaceCarGame.png]
