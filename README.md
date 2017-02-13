@@ -4,6 +4,8 @@ EgoCS is an Entity Component System (ECS) Framework specifically made for C# and
 
 Get EgoCS here: https://github.com/andoowhy/EgoCS
 
+Wiki is here : https://github.com/andoowhy/EgoCS/wiki
+
 This example aims to demonstrate :
 
 1. Create Components, attach them to Entities (GameObjects)
