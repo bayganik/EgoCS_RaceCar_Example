@@ -8,4 +8,4 @@ This example shows:
 2. Create Events (to get the systems to communicate)
 3. Create Systems (to do all the logic of the game)
 
-![RaceCarGame.png]
+![Screen Shot][RaceCarGame.png]
