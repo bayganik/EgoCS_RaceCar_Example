@@ -12,4 +12,4 @@ This example aims to demonstrate :
 
 3. Create Systems (to do all the logic of the game)
 
-![game image](/blob/master/RaceCarGame.png]
+![game image](https://github.com/bayganik/EgoCS_RaceCar_Example/blob/master/RaceCarGame.png]
