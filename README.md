@@ -1,4 +1,4 @@
-# EgoCS Race Car Example
+# Race Car Example using EgoCS
 This is a simple and interactive Unity3d example project to show how to use EgoCs (Entity Component System).
 EgoCS is an Entity Component System (ECS) Framework specifically made for C# and Unity
 
