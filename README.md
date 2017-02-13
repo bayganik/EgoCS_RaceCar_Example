@@ -4,7 +4,11 @@ EgoCS is an Entity Component System (ECS) Framework specifically made for C# and
 
 Get EgoCS here: https://github.com/andoowhy/EgoCS
 This example shows:
+
 1. Create Components, attach them to Entities (GameObjects)
+
 2. Create Events (to get the systems to communicate)
+
 3. Create Systems (to do all the logic of the game)
+
 ![alt tag](blob/master/RaceCarGame.png]
