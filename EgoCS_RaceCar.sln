@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgoCS_RaceCar", "EgoCS_RaceCar.csproj", "{3132276E-3A22-1F7B-0183-CE93E8383754}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgoCS_RaceCar.Editor", "EgoCS_RaceCar.Editor.csproj", "{2C4950F2-7D51-58BE-EB62-C66D962610E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3132276E-3A22-1F7B-0183-CE93E8383754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3132276E-3A22-1F7B-0183-CE93E8383754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3132276E-3A22-1F7B-0183-CE93E8383754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3132276E-3A22-1F7B-0183-CE93E8383754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C4950F2-7D51-58BE-EB62-C66D962610E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C4950F2-7D51-58BE-EB62-C66D962610E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C4950F2-7D51-58BE-EB62-C66D962610E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C4950F2-7D51-58BE-EB62-C66D962610E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

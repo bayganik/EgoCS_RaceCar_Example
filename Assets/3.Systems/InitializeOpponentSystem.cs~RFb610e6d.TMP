@@ -1,0 +1,57 @@
+using UnityEngine;
+using System.Collections;
+
+public class InitializeOpponentSystem : EgoSystem<EgoConstraint< OpponentsComponent, Transform>>
+{
+	public override void Start()
+	{
+        constraint.ForEachGameObject(
+            ( ego,  opponents ,  transform) =>
+                {
+                    Debug.Log("destroy" + transform.childCount);
+                    // Remove all previous cars
+                    //for (int i = 0; i < transform.childCount; i++)
+                    //{
+                    //    //Ego.Destroy(transform.GetChild(i).gameObject);
+                    //    Ego.DestroyGameObject(transform.GetChild(i).gameObject);
+                    //}
+
+                    // Create cars
+                    for (int row = 0; row < opponents.maxCars; row++)
+                    {
+                        Debug.Log("maxcars" + opponents.maxCars);
+                        //var carIndex = Random.Range(0, opponents.cars.Count);
+                        //Debug.Log("CardIndex" + carIndex);
+                        //if (!opponents.cars[carIndex]) return;
+
+                        //var carEgo = Ego.AddGameObject(GameObject.Instantiate(opponents.cars[carIndex]));
+                        //carEgo.gameObject.name = "RedCar";
+                        //carEgo.gameObject.transform.parent = transform;
+                        ////
+                        //// position of opponent
+                        ////
+                        //SpriteRenderer carSprite;
+                        //if (!carEgo.TryGetComponents(out carSprite)) return;
+                        //var x = carSprite.bounds.size.y * (row + -opponents.maxCars / 2.0f + 0.5f);
+                        //var y = 0;
+                        //carEgo.transform.localPosition = new Vector2(x, y);
+
+                        //var e = new BrickCreatedEvent(opponents.maxCars * opponents.columns);
+                        //EgoEvents<BrickCreatedEvent>.AddEvent(e);
+
+                    }
+                }
+
+            );
+    }
+
+	public override void Update()
+	{
+		
+	}
+
+	public override void FixedUpdate()
+	{
+		
+	}
+}

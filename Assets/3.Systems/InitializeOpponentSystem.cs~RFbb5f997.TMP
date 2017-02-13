@@ -1,0 +1,76 @@
+using UnityEngine;
+using System.Collections;
+
+public class InitializeOpponentSystem : EgoSystem<EgoConstraint< OpponentsComponent, Transform>>
+{
+	public override void Start()
+	{
+        Reset_The_Opponents();
+
+
+    }
+
+    private void Reset_The_Opponents()
+    {
+        
+
+        constraint.ForEachGameObject(
+            (ego, opponents, transform) =>
+            {
+                var spawnX = opponents.spawnOrigin.position.x;
+                var spawnY = opponents.spawnOrigin.position.y;
+                Debug.Log(spawnX + "," + spawnY);
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    Ego.DestroyGameObject(transform.GetChild(i).GetComponent<EgoComponent>());
+                }
+                for (int cnt = 0; cnt < opponents.maxCars; cnt++)
+                {
+                    //
+                    // create object from prefabs in Assets/Resources folder
+                    //
+                    GameObject oppsObj = GameObject.Instantiate(Resources.Load("Opponent", typeof(GameObject))) as GameObject;
+                    oppsObj.name = "Opps_" + cnt.ToString();
+                    oppsObj.transform.parent = transform;
+                    //
+                    // Get the sprite renderer component & change the location
+                    //
+                    SpriteRenderer oppsRender = oppsObj.GetComponent<Renderer>() as SpriteRenderer;
+                    //var x = oppsRender.bounds.size.x * (cnt + opponents.spawnOrigin.position.x * 2.0f + 1.0f);
+                    var x = oppsRender.bounds.size.x * (cnt + spawnX + (oppsRender.bounds.center.x * 2.0f));
+                    var y = spawnY;
+                    oppsRender.transform.localPosition = new Vector2(x, y);
+                    //
+                    // Add the new object to the cars list 
+                    //
+                    opponents.cars.Add(oppsObj);
+                    //
+                    // Add an ego component to the object
+                    //
+                    var oppsEgo = Ego.AddGameObject(oppsObj);
+                    //
+                    // now position it
+                    //    Get its sprite renderer
+                    //    set the x,y coordinants
+                    //
+                   // SpriteRenderer oppsRender;
+                    //if (!oppsEgo.TryGetComponents(out oppsRender)) continue;
+
+                    //var x = oppsRender.bounds.size.x * (cnt + -opponents.maxCars / 2.0f + 0.5f);
+                    //var y = oppsRender.bounds.size.y * (cnt + -opponents.maxCars / 2.0f + 0.5f);
+                    //oppsEgo.transform.localPosition = new Vector2(x, y);
+                }
+            }
+
+            );
+    }
+	public override void Update()
+	{
+		
+	}
+
+	public override void FixedUpdate()
+	{
+		
+	}
+}

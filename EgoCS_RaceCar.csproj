@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3132276E-3A22-1F7B-0183-CE93E8383754}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.5.0f3</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PlaymodeTestsRunner">
+      <HintPath>Library\UnityAssemblies\UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\1.Components\EndOfLineComponent.cs" />
+    <Compile Include="Assets\1.Components\OpponentCarComponent.cs" />
+    <Compile Include="Assets\1.Components\OpponentsComponent.cs" />
+    <Compile Include="Assets\1.Components\PauseComponent.cs" />
+    <Compile Include="Assets\1.Components\PlayerComponent.cs" />
+    <Compile Include="Assets\1.Components\SpeedComponent.cs" />
+    <Compile Include="Assets\1.Components\UIComponent.cs" />
+    <Compile Include="Assets\2.Events\CheckEndOfLineEvent.cs" />
+    <Compile Include="Assets\2.Events\EndOfGameEvent.cs" />
+    <Compile Include="Assets\3.Systems\EndOfGameSystem.cs" />
+    <Compile Include="Assets\3.Systems\EndOfLineSystem.cs" />
+    <Compile Include="Assets\3.Systems\InitializeOpponentSystem.cs" />
+    <Compile Include="Assets\3.Systems\InitializePlayerSystem.cs" />
+    <Compile Include="Assets\3.Systems\OpponentCarSystem.cs" />
+    <Compile Include="Assets\3.Systems\PlayerCarSystem.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle1.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle10.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle11.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle12.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle2.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle3.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle4.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle5.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle6.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle7.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle8.cs" />
+    <Compile Include="Assets\EgoCS\Bundle\EgoBundle9.cs" />
+    <Compile Include="Assets\EgoCS\Components\EgoComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnCollisionEnter2DComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnCollisionEnterComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnCollisionExit2DComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnCollisionExitComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnCollisionStay2DComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnCollisionStayComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnTriggerEnter2DComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnTriggerEnterComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnTriggerExit2DComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnTriggerExitComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnTriggerStay2DComponent.cs" />
+    <Compile Include="Assets\EgoCS\Components\MonoBehavior Messages\OnTriggerStayComponent.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint1.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint10.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint11.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint12.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint2.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint3.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint4.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint5.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint6.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint7.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint8.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoConstraint9.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint1.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint10.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint11.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint12.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint2.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint3.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint4.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint5.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint6.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint7.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint8.cs" />
+    <Compile Include="Assets\EgoCS\Constraints\EgoParentConstraint9.cs" />
+    <Compile Include="Assets\EgoCS\Ego.cs" />
+    <Compile Include="Assets\EgoCS\EgoCleanUp.cs" />
+    <Compile Include="Assets\EgoCS\EgoEvents.cs" />
+    <Compile Include="Assets\EgoCS\EgoInterface.cs" />
+    <Compile Include="Assets\EgoCS\EgoSystems.cs" />
+    <Compile Include="Assets\EgoCS\Events\AddedComponent.cs" />
+    <Compile Include="Assets\EgoCS\Events\AddedGameObject.cs" />
+    <Compile Include="Assets\EgoCS\Events\DestroyedComponent.cs" />
+    <Compile Include="Assets\EgoCS\Events\DestroyedGameObject.cs" />
+    <Compile Include="Assets\EgoCS\Events\EgoEvent.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\CollisionEnter.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\CollisionEnter2D.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\CollisionExit.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\CollisionExit2D.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\CollisionStay.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\CollisionStay2D.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\TriggerEnter.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\TriggerEnter2D.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\TriggerExit.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\TriggerExit2D.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\TriggerStay.cs" />
+    <Compile Include="Assets\EgoCS\Events\MonoBehavior Messages\TriggerStay2D.cs" />
+    <Compile Include="Assets\EgoCS\Events\SetParent.cs" />
+    <Compile Include="Assets\EgoCS\System\EgoSystem.cs" />
+    <Compile Include="Assets\EgoCS\Util\BitMask.cs" />
+    <Compile Include="Assets\EgoCS\Util\ComponentIDs.cs" />
+    <Compile Include="Assets\EgoCS\Util\Tuple.cs" />
+    <Compile Include="Assets\SpawnPoint.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>

@@ -1,0 +1,51 @@
+using UnityEngine;
+
+public class PlayerCarSystem : EgoSystem<EgoConstraint< PlayerComponent>>
+{
+    
+
+	public override void Start()
+	{
+        constraint.ForEachGameObject(
+            ( ego,  endofline) =>
+            {
+                //Debug.Log(player.transform.position.y );
+            }
+            
+        );
+        
+    }
+
+	public override void Update()
+	{
+        
+        constraint.ForEachGameObject(
+            ( ego, endofline) =>
+            {
+                //Debug.Log(player.transform.position.y + ", " + finishline.transform.position.y);
+                //if (transform.position.y > finishline.transform.position.y)
+                //{
+                //    Debug.Log("Crossed the finish line.");
+                //    return;
+                //}
+                //Debug.Log("Update player");
+                float moveVertical = Input.GetAxis("Vertical");
+
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+                    Debug.Log("player speed:" + "  vertical:" + moveVertical);
+                        //Vector3 now = player.transform.position;
+                    //player.transform.position = new Vector3(now.x, now.y + moveAble.speed, now.z);
+                    //player.transform.position = new Vector3(now.x, now.y + .03f, now.z);
+
+                }
+            }
+
+        );
+    }
+
+	public override void FixedUpdate()
+	{
+		
+	}
+}
