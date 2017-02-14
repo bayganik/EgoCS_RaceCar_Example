@@ -2,17 +2,10 @@ using UnityEngine;
 
 public class OpponentCarSystem : EgoSystem<EgoConstraint<OpponentCarComponent, SpeedComponent>>
 {
-    EgoComponent carComp;
     bool gameIsOver = false;
 
     public override void Start()
 	{
-        constraint.ForEachGameObject(
-            (ego, opponentcar, speed) =>
-            {
-                carComp = ego;
-            }
-            );
         //
         // Register to listen to EndOfGame broadcast
         //
@@ -24,7 +17,6 @@ public class OpponentCarSystem : EgoSystem<EgoConstraint<OpponentCarComponent, S
         constraint.ForEachGameObject(
             (ego, opponentcar, speed) =>
             {
-                carComp = ego;
 
                 if (gameIsOver)
                 {
@@ -33,12 +25,13 @@ public class OpponentCarSystem : EgoSystem<EgoConstraint<OpponentCarComponent, S
                 else
                 {
                     Vector3 now = opponentcar.transform.position;
-                        opponentcar.transform.position = new Vector3(now.x, now.y + speed.speed, now.z);
-                        //
-                        // invoke an event to check if the car has crossed the line
-                        //
-                        var eve = new CheckEndOfLineEvent(carComp);
-                        EgoEvents<CheckEndOfLineEvent>.AddEvent(eve);
+                    opponentcar.transform.position = new Vector3(now.x, now.y + speed.speed, now.z);
+                    //
+                    // invoke an event to check if the car has crossed the line
+                    //     ego is the current GameObject / EgoComponent (happens to be Opps_x car)
+                    //
+                    var eve = new CheckEndOfLineEvent(ego);
+                    EgoEvents<CheckEndOfLineEvent>.AddEvent(eve);
                 }
             }
             );
