@@ -15,3 +15,6 @@ This example aims to demonstrate :
 3. Create Systems (to do all the logic of the game)
 
 ![game image](RaceCarGame.png)
+
+Update Feb 14, 2017 
+EgoCS author made a few suggestions regarding systems.  They have been cleaned up
