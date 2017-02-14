@@ -5,7 +5,7 @@ public class EndOfGameSystem : EgoSystem<EgoConstraint<UIComponent>>
 	public override void Start()
 	{
         //
-        // turn off the panel with "Game Over"
+        // turn off the panel with "Game Over" text
         //
         constraint.ForEachGameObject((ego, ui) =>
         {

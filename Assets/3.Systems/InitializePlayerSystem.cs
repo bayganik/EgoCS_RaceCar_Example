@@ -9,9 +9,8 @@ public class InitializePlayerSystem : EgoSystem<EgoConstraint<PlayerComponent>>
 	public override void Start()
 	{
         constraint.ForEachGameObject(
-            ( ego,  player) =>
+            ( egoComp,  player) =>
             {
-                //player.transform.position = transform.position;
                 player.speed = .030f;
                 
             }

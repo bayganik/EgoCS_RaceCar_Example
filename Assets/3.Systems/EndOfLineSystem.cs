@@ -1,32 +1,19 @@
 using UnityEngine;
 
-public class EndOfLineSystem : EgoSystem<EgoConstraint<Transform, EndOfLineComponent>>
+public class EndOfLineSystem : EgoSystem<EgoConstraint<EndOfLineComponent>>
 {
-    Transform finishLine;
-
-
     public override void Start()
     {
-        constraint.ForEachGameObject(
-            (ego, transform, endofline) =>
-            {
-                finishLine = endofline.transform;
-                //
-                // if any cars cross the finish line then handle
-                //
-                EgoEvents<CheckEndOfLineEvent>.AddHandler(Handle);
-            }
-            );
+        //
+        // if any cars cross the finish line then handle 
+        // Checking of end of line event
+        //
+        EgoEvents<CheckEndOfLineEvent>.AddHandler(Handle);
     }
 
     public override void Update()
 	{
-        constraint.ForEachGameObject(
-            (ego, transform,  endofline) =>
-            {
-            
-            }
-            );
+
     }
 
 	public override void FixedUpdate()
@@ -36,19 +23,29 @@ public class EndOfLineSystem : EgoSystem<EgoConstraint<Transform, EndOfLineCompo
     private void Handle(CheckEndOfLineEvent e)
     {
         //
-        // If any car crosses the finish line, then game ends
+        // Check to see if Ego entity "car" or "opps_x" has crossed the finish line
         //
-        if (e.car.transform.position.y > finishLine.transform.position.y)
-        {
-            //
-            // Issue the pause component to the car the just crossed the finish line
-            //
-            Ego.AddComponent<PauseComponent>(e.car);
-            //
-            // Invoke the event that looks for PauseComponent and stops the game
-            //
-            EgoEvents<EndOfGameEvent>.AddEvent(new EndOfGameEvent(true));
-        }
+        constraint.ForEachGameObject(
+        (egoComp, endofline) =>
+            {
+                //
+                // If any car crosses the finish line, then game ends
+                //
+                if (e.car.transform.position.y > endofline.transform.position.y)
+                {
+                    //
+                    // Following is a play line to see how to add a component to an entity
+                    // Issue the pause component to the car the just crossed the finish line
+                    //
+                    Ego.AddComponent<PauseComponent>(egoComp);
+                    //
+                    // Invoke the event that causes the EndOfGameSystem to turn on "Game Over" text 
+                    //
+                    EgoEvents<EndOfGameEvent>.AddEvent(new EndOfGameEvent(true));
+                }
+            }
+            );
+
             
     }
 

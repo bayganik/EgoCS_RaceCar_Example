@@ -22,30 +22,31 @@ public class InitializeOpponentSystem : EgoSystem<EgoConstraint<Transform, Oppon
         // Creation of Opponents under OpponentContainer
         //
         constraint.ForEachGameObject(
-            (ego, transform, opponents) =>
+            (egoComp, transform, opponents) =>
             {
                 //
                 // Player's car is the origin of the spawn point for all others
+                // The opponents use the Player's car as offset to place themselves
                 //
                 var spawnX = opponents.spawnOrigin.position.x + Mathf.Abs(opponents.spawnOrigin.position.x / 2.0f);
                 var spawnY = opponents.spawnOrigin.position.y;
-                Debug.Log(spawnX + "," + spawnY);
                 //
-                // destroy all the kids
+                // destroy all the kids (if any)
                 //
                 for (int i = 0; i < transform.childCount; i++)
                 {
                     Ego.DestroyGameObject(transform.GetChild(i).GetComponent<EgoComponent>());
                 }
                 //
-                // 
+                //  Setup of opponent cars as children
+                //
                 for (int cnt = 0; cnt < opponents.maxCars; cnt++)
                 {
                     //
                     // create object from prefabs in Assets/Resources folder
-                    // Give it a name starting with "Opps_" plust a number
-                    // Give it a sprite renderer so it can be displayed
-                    // Give it a position offset on x-axis from the player car
+                    //      Give it a name starting with "Opps_" plust a number
+                    //      Give it a sprite renderer so it can be displayed
+                    //      Give it a position offset on x-axis from the player car
                     //
                     GameObject oppsObj = GameObject.Instantiate(Resources.Load("Opponent", typeof(GameObject))) as GameObject;
                     oppsObj.name = "Opps_" + cnt.ToString();
@@ -73,17 +74,6 @@ public class InitializeOpponentSystem : EgoSystem<EgoConstraint<Transform, Oppon
                     // Tell EgoCS about this GameObject
                     //
                     var oppsEgo = Ego.AddGameObject(oppsObj);
-                    //
-                    // Add new car and its speed to "cars" list
-                    //
-                    //opponents.cars.Add(oppsObj);
-                    //opponents.speed.Add(Random.value * 0.02f);
-                    //
-                    // Add an ego component to the object so EgoCS can see it as an entity
-                    //
-                    
-                    
-                    
                 }
             }
 
